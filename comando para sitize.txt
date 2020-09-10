@@ -1,0 +1,1 @@
+gcc -fsanitize=address main2.c ft_strtrim.c ft_substr.c ft_strjoin.c ft_split.c ft_itoa.c ft_strmapi.c ft_strlen.c ft_strchr.c ft_atoi.c ft_strdup.c ft_strnstr.c ft_strlcpy.c ft_strncmp.c ft_strlcat.c ft_bzero.c ft_calloc.c ft_memccpy.c libft.h -L -lft && ./a.out
