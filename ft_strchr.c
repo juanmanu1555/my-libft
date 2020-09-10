@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jrivas-z <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/13 15:06:54 by jrivas-z          #+#    #+#             */
-/*   Updated: 2020/01/20 16:18:56 by jrivas-z         ###   ########.fr       */
+/*   Created: 2020/01/13 15:18:23 by jrivas-z          #+#    #+#             */
+/*   Updated: 2020/01/20 16:40:43 by jrivas-z         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,16 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int				count;
-	unsigned char	*cpy;
+	char	ch;
+	size_t	i;
 
-	count = 0;
-	cpy = (unsigned char *)s;
-
-	if (!s)
-		return (NULL);
-
-	while (s[count])
+	i = 0;
+	ch = c;
+	while (i <= ft_strlen((char *)s))
 	{
-		if (cpy[count] == (unsigned char)c)
-			return (char *)(s + count);
-		count++;
+		if (s[i] == ch)
+			return (((char *)s + i));
+		i++;
 	}
-	if ((unsigned char)c == '\0')
-		return (char *)(s + count);
 	return (NULL);
 }
